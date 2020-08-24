@@ -25,7 +25,9 @@ namespace IdentityServer
 
             var builder = services.AddIdentityServer(options =>
                 {
+                    //IdentityServer3 API's can only accept JWT tokens.
                     options.AccessTokenJwtType = "JWT";
+                    //This produces a legacy support URI for IdSrv3 Access token libraries to use.
                     options.EmitStaticAudienceClaim = true;
                 })
                 .AddInMemoryIdentityResources(Config.IdentityResources)
