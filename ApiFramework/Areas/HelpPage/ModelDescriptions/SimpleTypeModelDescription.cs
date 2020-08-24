@@ -1,0 +1,6 @@
+namespace ApiFramework.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}
